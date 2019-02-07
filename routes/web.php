@@ -27,6 +27,9 @@ Route::patch('notifications/{id}/read', 'NotificationController@markAsRead');
 Route::post('notifications/mark-all-read', 'NotificationController@markAllRead');
 Route::post('notifications/{id}/dismiss', 'NotificationController@dismiss');
 
+Route::post('notifications/all', 'SendUsersController');
+
+
 // Push Subscriptions
 Route::post('subscriptions', 'PushSubscriptionController@update');
 Route::post('subscriptions/delete', 'PushSubscriptionController@destroy');
