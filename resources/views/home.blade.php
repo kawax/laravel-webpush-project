@@ -17,6 +17,8 @@
                         @endif
 
                         You are logged in!
+
+                        <webpush-component></webpush-component>
                     </div>
                 </div>
             </div>
