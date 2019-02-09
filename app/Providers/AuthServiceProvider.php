@@ -25,6 +25,13 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        //WebPush送信可能なユーザー
+        Gate::define('send-webpush', function ($user) {
+            return in_array($user->id, [
+                1,
+            ]);
+        });
+
         //
     }
 }

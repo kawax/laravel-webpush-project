@@ -12,6 +12,9 @@ class SendUsersController extends Controller
 {
     public function __invoke()
     {
+        // 管理者のみ許可するならAuthServiceProviderで設定してここを有効化
+        // $this->authorize('send-webpush');
+
         Notification::send(User::all(), new HelloNotification());
     }
 }
